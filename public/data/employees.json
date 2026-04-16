@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Ahmet Yılmaz",
+    "department": "İnsan Kaynakları",
+    "position": "Müdür",
+    "salary": 15000
+  },
+  {
+    "id": 2,
+    "name": "Ayşe Demir",
+    "department": "Pazarlama",
+    "position": "Uzman",
+    "salary": 12000
+  },
+  {
+    "id": 3,
+    "name": "Mehmet Kaya",
+    "department": "Teknoloji",
+    "position": "Yazılım Geliştirici",
+    "salary": 18000
+  },
+  {
+    "id": 4,
+    "name": "Fatma Şahin",
+    "department": "Satış",
+    "position": "Satış Temsilcisi",
+    "salary": 10000
+  }
+]

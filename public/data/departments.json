@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "İnsan Kaynakları",
+    "budget": 150000,
+    "spent": 87500
+  },
+  {
+    "id": 2,
+    "name": "Pazarlama",
+    "budget": 200000,
+    "spent": 145000
+  },
+  {
+    "id": 3,
+    "name": "Teknoloji",
+    "budget": 300000,
+    "spent": 210000
+  },
+  {
+    "id": 4,
+    "name": "Satış",
+    "budget": 180000,
+    "spent": 125000
+  }
+]
