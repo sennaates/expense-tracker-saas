@@ -19,3 +19,14 @@ export const getExpenses = async () => {
     return [];
   }
 };
+
+export const getEmployees = async () => {
+  try {
+    const response = await fetch('/data/employees.json');
+    if (!response.ok) throw new Error('Çalışan verisi çekilemedi.');
+    return await response.json();
+  } catch (error) {
+    console.error("API Hatası:", error);
+    return [];
+  }
+};

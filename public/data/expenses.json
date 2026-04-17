@@ -1,7 +1,8 @@
 [
   {
     "id": 1,
-    "department": "İnsan Kaynakları",
+    "employeeId": 1,
+    "departmentId": 1,
     "category": "Eğitim",
     "amount": 5000,
     "date": "2024-01-15",
@@ -10,7 +11,8 @@
   },
   {
     "id": 2,
-    "department": "Pazarlama",
+    "employeeId": 2,
+    "departmentId": 2,
     "category": "Reklam",
     "amount": 25000,
     "date": "2024-01-20",
@@ -19,7 +21,8 @@
   },
   {
     "id": 3,
-    "department": "Teknoloji",
+    "employeeId": 3,
+    "departmentId": 3,
     "category": "Yazılım",
     "amount": 15000,
     "date": "2024-01-25",
@@ -28,7 +31,8 @@
   },
   {
     "id": 4,
-    "department": "Satış",
+    "employeeId": 4,
+    "departmentId": 4,
     "category": "Seyahat",
     "amount": 8000,
     "date": "2024-02-01",
@@ -37,7 +41,8 @@
   },
   {
     "id": 5,
-    "department": "Pazarlama",
+    "employeeId": 5,
+    "departmentId": 2,
     "category": "Etkinlik",
     "amount": 12000,
     "date": "2024-02-05",
@@ -46,11 +51,32 @@
   },
   {
     "id": 6,
-    "department": "Teknoloji",
+    "employeeId": 3,
+    "departmentId": 3,
     "category": "Donanım",
     "amount": 20000,
     "date": "2024-02-10",
     "description": "Sunucu yükseltmesi",
     "status": "pending"
+  },
+  {
+    "id": 7,
+    "employeeId": 1,
+    "departmentId": 1,
+    "category": "Ofis Malzemeleri",
+    "amount": 3500,
+    "date": "2024-02-12",
+    "description": "Ofis ekipmanları",
+    "status": "rejected"
+  },
+  {
+    "id": 8,
+    "employeeId": 2,
+    "departmentId": 2,
+    "category": "Reklam",
+    "amount": 18000,
+    "date": "2024-02-15",
+    "description": "Sosyal medya kampanyası",
+    "status": "approved"
   }
 ]

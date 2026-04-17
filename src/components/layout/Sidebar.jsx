@@ -1,29 +1,26 @@
 import { LayoutDashboard, Users, FileText } from 'lucide-react';
 
-const Sidebar = () => {
+const Sidebar = ({ activeView, onViewChange, onNewExpense }) => {
   const menuItems = [
     { 
       id: 'dashboard', 
       label: 'Dashboard', 
-      icon: LayoutDashboard, 
-      active: true 
+      icon: LayoutDashboard
     },
     { 
       id: 'departments', 
       label: 'Departments', 
-      icon: Users, 
-      active: false 
+      icon: Users
     },
     { 
       id: 'reports', 
       label: 'Reports', 
-      icon: FileText, 
-      active: false 
+      icon: FileText
     },
   ];
 
   return (
-    <aside className="w-64 bg-white border-r border-gray-200 flex flex-col h-screen fixed left-0 top-0">
+    <aside className="w-64 bg-white border-r border-gray-200 flex-col h-full hidden md:flex flex-shrink-0">
       {/* Logo Section */}
       <div className="p-6 border-b border-gray-200">
         <div className="flex items-center gap-3">
@@ -38,26 +35,29 @@ const Sidebar = () => {
       </div>
 
       {/* Navigation Menu */}
-      <nav className="flex-1 p-4">
+      <nav className="flex-1 p-4 overflow-y-auto">
         <ul className="space-y-1">
           {menuItems.map((item) => {
             const Icon = item.icon;
+            const isActive = activeView === item.id;
+            
             return (
               <li key={item.id}>
                 <button
+                  onClick={() => onViewChange(item.id)}
                   className={`
                     w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium
                     transition-all duration-200 relative
                     ${
-                      item.active
-                        ? 'bg-gray-50 text-gray-900 shadow-sm'
+                      isActive
+                        ? 'bg-blue-50 text-blue-700'
                         : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                     }
                   `}
                 >
-                  {/* Active indicator - green left border */}
-                  {item.active && (
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-emerald-500 rounded-r"></div>
+                  {/* Active indicator - blue left border */}
+                  {isActive && (
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-10 bg-blue-600 rounded-r"></div>
                   )}
                   <Icon className="w-5 h-5" />
                   <span>{item.label}</span>
@@ -69,8 +69,11 @@ const Sidebar = () => {
       </nav>
 
       {/* New Expense Button */}
-      <div className="p-4 border-t border-gray-200">
-        <button className="w-full bg-navy-900 hover:bg-navy-800 text-white font-medium py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors duration-200">
+      <div className="p-4 border-t border-gray-200 flex-shrink-0">
+        <button 
+          onClick={onNewExpense}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-colors duration-200 shadow-sm hover:shadow-md"
+        >
           <span className="text-lg">+</span>
           <span>New Expense</span>
         </button>
